@@ -17,17 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//List
-Route::get('articles', 'ArticleController@index');
-
-//Get one
-Route::get('article/{id}', 'ArticleController@show');
-
-//Create new
-Route::post('article', 'ArticleController@store');
-
-//Edit id
-Route::put('article/{id}', 'ArticleController@store');
-
-//Delete id
-Route::delete('article/{id}', 'ArticleController@destroy');
+Route::get('/exchange', 'ExchangeDataController@index');
+Route::get('/exchange/{coin_name}', 'ExchangeDataController@get_currency');
+Route::get('/exchange/{coin_name}/{convert}', 'ExchangeDataController@convert_currency');
+Route::get('/news', 'ExchangeDataController@latest_news');

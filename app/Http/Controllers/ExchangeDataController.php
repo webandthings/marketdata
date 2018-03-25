@@ -1,9 +1,3 @@
-# CryptoTracker
-A web application for crytptocurrency price calculator and news
-
-### app/../ExchangeDataController.php
-
-```
 <?php
 
 namespace App\Http\Controllers;
@@ -60,5 +54,3 @@ class ExchangeDataController extends Controller
 
     
 }
-
-```
